@@ -1,0 +1,14 @@
+body{
+    background-color: black;
+    font-family: cursive;
+}
+.Titulo{
+    color: white;
+    text-align: center;
+    font-size: 70px;
+}
+.SubTitulo{
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
