@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Man.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <header>
+        <h1 class="Titulo">Pegue ou Deixa!</h1>
+        <p class="SubTitulo">desafio com 150 escolhas!!!</p>
+    </header>
+
+    <div class="personagens-laterais">
+        <img src="https://static.wikia.nocookie.net/ultra-kaiju-gk/images/e/e8/KingJoe.png/revision/latest?cb=20180824140353" alt="waifuesquerda" class="waifu-esquerda">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/77/2B_Nier_Automata.png" alt="waifu direta" class="waifu-direita">
+    </div>
+    
+    <button id="play" class="play">Começar a brincadeira</button>
+    
+    <footer>
+        <p>&copy; feito Edgar_Tiga 2026</p>
+    </footer>
+    <p clas="aviso">Esse jogo é proibido para menores de idade!</p>
+   <script>
+    let play = document.getElementById("play");
+    
+    play.addEventListener("click", function (){
+        // Abre uma caixinha perguntando a idade
+        let idade = prompt("Por favor, digite a sua idade para entrar no desafio:");
+
+        // Valida se o usuário digitou algo ou cancelou
+        if (idade === null || idade.trim() === "") {
+            alert("Você precisa digitar uma idade para continuar!");
+            return; // Interrompe a execução
+        }
+
+        // Converte o texto digitado em um número inteiro
+        idade = parseInt(idade);
+
+        // Verifica se é menor de idade ou se digitou algo inválido (letras)
+        if (isNaN(idade) || idade < 18) {
+            alert("Acesso negado! Este jogo é permitido apenas para maiores de 18 anos.");
+        } else {
+            // Se for maior de idade, o jogo roda normalmente!
+            alert("Acesso liberado! Divirta-se.");
+            document.body.style.backgroundColor = "black";
+            document.body.style.color = "white";
+            
+            // Aqui depois você pode colocar a lógica para abrir as 50 escolhas...
+        }
+    });
+</script>
+</body>
+</html>
